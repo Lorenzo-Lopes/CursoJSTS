@@ -30,3 +30,7 @@ console.log(ob1, ob2)
 ob2= {...ob1}
 ob1.nome= 'jorge'
 console.log(ob1, ob2)
+
+
+array1.push(ob1)
+console.log(array1.length)
