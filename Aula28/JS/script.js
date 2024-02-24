@@ -19,7 +19,7 @@ function corrigeZero(num){
 
 function formataData(data){
     console.log(data)
-    const dia = corrigeZero(data.getDate())
+    const dia = data.getDate()
     const mes = corrigeZero(data.getMonth()+1);
     const ano = corrigeZero(data.getFullYear());
     const hora= corrigeZero(data.getHours());
