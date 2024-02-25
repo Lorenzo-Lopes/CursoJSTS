@@ -1,13 +1,14 @@
 const pessoa = {
-    nome:'andré',
-    sobrenome:'viado',
+    nome:'Lorenzo',
+    sobrenome:'Lopes',
     idade :25,
     endereco:{
-        rua:'dos bobos',
-        numero: 320
+        rua:'av. Piracicamirim',
+        numero: 3039
     }
 };
 
-const {nome,sobrenome} = pessoa;
+// Ex de atribuição por desestruturação vvv
+const {nome='',... resto} = pessoa;
 
-console.log(nome,sobrenome);
+console.log(nome,resto);
