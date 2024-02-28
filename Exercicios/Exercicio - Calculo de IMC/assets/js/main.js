@@ -2,6 +2,7 @@ const form = document.querySelector('.form');
 
 form.addEventListener('submit', function (evento){
     evento.preventDefault();
+    console.log("aaaaaaaaa")
     const inputPeso = evento.target.querySelector('.pesoDigitado');
     const inputAltura = evento.target.querySelector('.alturaDigitada');
 
