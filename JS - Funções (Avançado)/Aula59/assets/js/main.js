@@ -1,80 +1,71 @@
 function Calculadora(){
-    this.display = document.querySelector('.display'),
+    this.display = document.querySelector('.display')
     this.inicia = () => {
+        this.display.focus();
         cliqueBotoes();
         enter();
-        teclaBackSpace()
-
+        keyBackSpace();
     };
-     const  cliqueBotoes = ()=>{
-        document.addEventListener('click',(e)=>{
-        const element = e.target;
-        
-        if(element.classList.contains('btn-num')){
-          btnParaDisplay(element.innerText);
-          this.display.focus();
-        }
-          if(element.classList.contains('btn-clear')){
+    const cliqueBotoes = () => {
+        document.addEventListener('click', e =>{
+            const el = e.target;
+            if(el.classList.contains('btn-num')){
+                setDiplay(el.innerText)
+                this.display.focus();
+            }
+            if(el.classList.contains('btn-clear')){
+                displayClear();
+                this.display.focus();
+            }
+            if(el. classList.contains('btn-del')){
+               del();
+               this.display.focus();
+            }
+            if(el.classList.contains('btn-eq')){
+                equal();
+                this.display.focus();
+            }
             this.display.focus();
-            clearDisplay();
-          }
-          if(element.classList.contains('btn-del')){
-            this.display.focus();
-            backSpace();
-          }
-          if(element.classList.contains('btn-eq')){
-            this.display.focus();
-            equal();
-          }
-          this.display.focus();
-  
-      });
-        
-      };
-      const btnParaDisplay= (valor)=>{
-        this.display.value += valor
-      };
-      const clearDisplay = ()=>{
-        this.display.value=''
-      };
-      backSpace=()=>{
-        this.display.value=this.display.value.slice(0,-1)
-     };
-    const equal=()=>{
-        let conta = this.display.value;
-  
-        try {
-          conta = eval(conta);
-  
-            if(!conta) {
-            alert('Conta inválida');
-            return;
-          }
-  
-          this.display.value = String(conta);
-        } catch(e) {
-          alert('Conta inválida');
-          return;
-        }
-      };
-    const  enter= () => {
-        this.display.addEventListener('keyup', e => {
-          if (e.keyCode === 13) {
-          equal();
-          console.log(e)
-          }
-        });
-      };
-      const teclaBackSpace = ()=> {
-        this.display.addEventListener('keypress', e =>{
-          if(e.keyCode===8){
-            backSpace();
-          }
         })
-      };
+    
+    };
+    const setDiplay = (valor) =>{
+        this.display.value += valor;
+    }
+    const displayClear = () =>{
+        this.display.value = ''
+    }
+    const del = ()=>{
+        this.display.value = this.display.value.slice(0,-1);
+    }
 
+    const equal = () =>{
+        let result = this.display.value;
+        try{
+            result = eval(result)
+        this.display.value = result
+        }catch{
+            alert('Sentença inválida ')
+            displayClear();
+        }   
+    }
+    const enter = ()=>{
+        this.display.addEventListener("keypress", e =>{
+            if (e.keyCode === 13){
+                equal();
+            }
+        })
+    }
+    const keyBackSpace = () =>{
+        this.display.addEventListener("keypress",e =>{
+            if(e.keyCode===8){
+                del();
+            }
+
+        })
+    }
 
 
 }
-const calculadora = new Calculadora();
+const calculadora= new Calculadora();
 calculadora.inicia()
