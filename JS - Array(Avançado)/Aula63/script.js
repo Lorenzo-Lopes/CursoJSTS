@@ -1,0 +1,25 @@
+// FUNÇÃO SPLICE: nomes.splice('Indice a ser manipulado', 'Indice que vai ser deletado',[Itens que serão adicionados separado por virgula.])
+
+console.log('Array inicial.')
+const nomes =  ['Lorenzo','Eduardo','Matheus','Bruno','Mayke','Jean']
+console.log(nomes)
+console.log('##########')
+console.log('pop')
+console.log(nomes, nomes.splice(-1,1))
+console.log('##########')
+console.log('push')
+console.log(nomes, nomes.splice(nomes.length,0,'Novo Nome'))
+console.log('##########')
+console.log('unshift')
+console.log(nomes, nomes.splice(0,0, 'Nome no começo'))
+console.log('##########')
+console.log('shift')
+console.log(nomes, nomes.splice(0,1))
+
+
+console.log('##########')
+console.log('Removendo 2 nomes no meio do array')
+console.log(nomes, nomes.splice(2,2))
+console.log('##########')
+console.log('adicionando 2 nomes no meio do array')
+console.log(nomes, nomes.splice(2,0,'nome1','nome2'))
