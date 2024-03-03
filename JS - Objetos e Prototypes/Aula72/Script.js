@@ -21,7 +21,7 @@ function Produto(nome, preco,estoque){
 
 const p1 = new Produto('Camiseta',20,3)
 p1.estoque = 555
-console.log(p1.estoque)
+console.log(p1)
 
 function criaProduto (nome){
     return{
@@ -38,3 +38,6 @@ const p2 = criaProduto('notebook');
 console.log (p2.nome)
 p2.nome='Joao'
 console.log (p2.nome)
+
+const p3 = Object.assign({},p1)
+console.log(p3.nome)
