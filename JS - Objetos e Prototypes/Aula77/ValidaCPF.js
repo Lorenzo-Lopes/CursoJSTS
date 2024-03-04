@@ -37,6 +37,7 @@ ValidaCPF.prototype.valida = function() {
 };
 
 ValidaCPF.prototype.criaDigito = function(cpfParcial) {
+  console.log(typeof cpfParcial)
   const cpfArray = Array.from(cpfParcial);
 
   let regressivo = cpfArray.length + 1;

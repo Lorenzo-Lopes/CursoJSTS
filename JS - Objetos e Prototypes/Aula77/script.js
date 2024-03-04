@@ -42,7 +42,7 @@ function getNove(cpfLimpo){
 }
 function getD1(cpf9){
     const arraycpf9 = Array.from(cpf9)
-    let multi =10
+    let multi =arraycpf9.length+1
     let soma = arraycpf9.reduce((ac,val)=> {
         ac += Number(val)*multi
         multi--
@@ -79,5 +79,5 @@ function montaCPF(cpf9,d1,d2){
     return cpfCompleto
 }
 
-const cpf = '31399376859'
+const cpf = '31699376859'
 validaCPF(cpf)
