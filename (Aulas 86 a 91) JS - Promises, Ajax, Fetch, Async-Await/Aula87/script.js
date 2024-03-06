@@ -42,6 +42,7 @@ Promise.race(promises).then(function(valor){
 function baixarPagina() {
     const emCache = false
     
+    
     if(emCache){
         return Promise.reject/* .resolve*/('Monstra pagina')
     }else{

@@ -1,6 +1,6 @@
 function rand(){
-    const min = 1* 500
-    const max = 3* 500
+    const min = 1* 1000
+    const max = 3* 1000
     return Math.floor(Math.random()* (max-min)+min);
 }
 function conectbd(msg,tempo){
