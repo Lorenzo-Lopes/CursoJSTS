@@ -1,4 +1,4 @@
-import GeraCPF from './modules/GeraCPF'
+import GeraCPF from './modules/GeraCPF.js'
 import './assets/css/style.css';
 
-GeraCPF;
+G
