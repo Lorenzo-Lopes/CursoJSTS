@@ -26,6 +26,6 @@ async function walk(files, rootDir) {
     console.log(fileFullPath);
   }
 }
-readdir('C:/Users/husky/Documents/CursoJSTS2/');
+readdir('C:/Users/husky/Documents/CursoJSTS/');
 
 
