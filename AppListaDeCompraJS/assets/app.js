@@ -1,33 +1,59 @@
-var itens = []
+const listaProdutos = document.querySelector('.lista-produtos')
+const btnCadastra = document.querySelector('.btn-cadastra')
+const nomeProduto = document.querySelector('.nome-produto')
+const precoProduto = document.querySelector('.valor-produto')
+const btnDel = document.querySelector('.del')
+const somaProdutos = document.querySelector('.soma-produto')
+var produto = []
 
-document.querySelector('input[type=submit]')
-.addEventListener('click',() => {
-    var nome = document.querySelector('.nome-produto')
-    var preco = document.querySelector('.valor-produto')
+btnCadastra.addEventListener('click', (e)=>{
+    const el = e.target
+    if (nomeProduto.value === ''|| precoProduto.value === ''){
+        alert('Verifique: Nome ou valor nao preenchido.')
+        return
+    }
+    pushProduto(nomeProduto.value, precoProduto.value)
+    insereLista(produto)
+    clear()
+    nomeProduto.focus()
 
 
-    itens.push({
-        nome:nome.value,
-        preco:preco.value
+})
+btnDel.addEventListener('click', (e)=>{
+        const el = e.target
+        if (el.classList.contains('delete')){
+            produto = []
+            somaProdutos.innerHTML = `<h1>Total: R$0</h1>`
+            insereLista(produto)
+
+        }
+    
+})
+
+function pushProduto(nome,preco){
+    produto.push({
+        nome:nome,
+        preco: Number(preco)
     })
+}
 
-    const lista = document.querySelector('.lista-produtos')
-    const totalhtml = document.querySelector('.soma-produto')
-    let valorTotal=0
-    lista.innerHTML=""
-    itens.map(function(val){
-        valorTotal +=  parseInt(val.preco)
-        lista.innerHTML +=`
+function insereLista(produto){
+    let totalItens= 0
+    listaProdutos.innerHTML= ''
+    produto.map(function(val){
+        totalItens += val.preco
+        listaProdutos.innerHTML += `
         <div class="lista-produto-single">
         <h3>${val.nome}</h3>
         <h3 class="preco"><span>R$${val.preco}</span></h3>
-    </div>`
-    totalhtml.innerHTML = `<h1> Total: R$${valorTotal}`
+        </div>
+        `
+        somaProdutos.innerHTML = `<h1>Total: R$${totalItens}</h1>` 
+        
     })
-    
-    nome.value=''
-    preco.value=''
-    nome.focus()
-})
+}
+function clear(){
+    nomeProduto.value=''
+    precoProduto.value=''
 
-
+}

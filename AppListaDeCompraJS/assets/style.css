@@ -44,6 +44,28 @@ h3.preco > span {
     border-radius: 20px;
     color: white;
 }
+.delete-iten{
+    background-color: rgb(54, 128, 115);
+    padding: 8px 10px;
+    border-radius: 20px;
+    color: white;
+    border: none;
+    margin-right: 20px;
+}
 .soma-produto{
     margin: 20px;
+}
+.delete{
+    
+    margin-left: 20px;
+    padding: 15px;
+    background-color: rgb(54, 128, 115);
+    border-radius: 20px;
+    color: white;
+    border: none;
+}
+button.delete{
+    font-size: 18px;
+    font-weight: bold;
+    
 }
