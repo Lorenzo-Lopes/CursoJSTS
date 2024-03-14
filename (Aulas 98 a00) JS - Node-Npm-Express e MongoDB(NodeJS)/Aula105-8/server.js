@@ -1,18 +1,22 @@
 const express = require('express')
 const app = express()
-
+app.use(express.urlencoded({extended:true}));
 //CRUD - create, read, update, delete >> post , get , put, delete
-
-
-// http:// meusite.com/profiles/LorenzoLopes
+// http:// meusite.com/profiles/LorenzoLopes'
 app.get('/',(req, res)=>{
      res.send(`
      <form action="/" method="POST">
-     Nome: <input type="text" name="nome">
-     <button>Enviar aaa.</button>
+     Nome do Cliente: <input type="text" name="nome">
+     <button>Enviar Formulario.</button>
      </form>
      `)
 });
+app.get('/test/:iUsuarios?/:parametro?',(req, res) =>{
+    console.log(req.params);
+    console.log(req.query);
+    res.send(req.query.parametro)
+})
+
 app.post('/', (req,res)=>{
     res.send('recebi o formulario.')
 })
