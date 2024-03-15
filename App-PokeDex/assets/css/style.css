@@ -3,7 +3,7 @@
     font-family:poke;
 }
 *{
-    font-family: poke;
+    
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -20,6 +20,7 @@ body{
     padding: 30px 2%;
 }
 .main h2{
+    font-family: poke;
     
     font-size: 60px;
     text-shadow: 5px 5px 2px blue;
@@ -27,17 +28,18 @@ body{
     color: yellow
 }
 .poke-boxes{
-    margin: 20px 0 ;
+    width:100%;
     display:flex;
     flex-wrap: wrap;
     
     
-}
-.poke-box{ 
+
+
+.poke-box { 
    
     border-color: rgb(58, 58, 58);
-    width: 31%;
-    margin: 20px 1%;
+    width: 180px;
+    margin: 20px 10px;
     border-radius: 10px;
     background-color: #ececec;
    
@@ -51,8 +53,7 @@ body{
 }
 .poke-box p{
     color: rgb(75, 75, 75);
-    font-size: 25px;
-    font-weight: lighter;
+    font-size: 20px;
     text-align: center;
     padding: 10px 0;
 }

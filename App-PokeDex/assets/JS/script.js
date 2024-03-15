@@ -9,11 +9,12 @@ fetch('https://pokeapi.co/api/v2/pokemon?limit=151')
      fetch(val.url)
      .then(response => response.json())
      .then(pokemonSingle =>{
-                setTimeout(() => {
+               
             poke.push({nome:val.name,imagem:pokemonSingle.sprites.front_default});
-            boxes.innerHTML+= `<div class="poke-box">
+            boxes.innerHTML+= `
+            <div class="poke-box">
             <p>${poke[i].nome.toUpperCase()}</p>
-            <img src="${poke[i].imagem}"" alt="" srcset="">
+            <a href="outra.html"><img src="${poke[i].imagem}"" alt="" srcset=""></a>
             ` 
             i++
             
@@ -23,7 +24,7 @@ fetch('https://pokeapi.co/api/v2/pokemon?limit=151')
             
          
             }
-        }, 500);
+      
     })
         
 })
