@@ -1,7 +1,0 @@
-// npm i - express >>> Instala as dependencias do modulo   EXPRESS
-// npm i express --save-dev >>>Muda a dependencia que o modulo é instalaod
-// npm unstall express >>> Desinstala um modulo.
-// npm update express >>> faz atualizações minor e patch
-// npm install express @version >>> instala a versão desejada.
-// npm ls >>> Monstra as dependencias que estão instaladas 
-//npm ls --depth=0 >>> Monstra as dependencias instaladas manualmente.
