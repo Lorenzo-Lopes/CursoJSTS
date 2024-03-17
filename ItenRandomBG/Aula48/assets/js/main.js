@@ -1,3 +1,11 @@
+const itens = [
+    'Machado de Guerra','Machado de Guerra','Machado de Guerra'    ,'Espada Longa'    ,'Espada Longa'    ,'Espada Longa'    ,'Adaga do ritual'    ,'Adagadoritual'    ,'Adaga do ritual'    ,'Espada Grande'    ,'Espada Grande'    ,'Machado Grade'    ,'Machado Grade'    ,'Demon Slayer'    ,'Armadura de Couro'
+    ,'Armadura de Couro'    ,'Armadura de Couro'    ,'Escudo'    ,'Escudo'    ,'Escudo'    ,'Armadura de Talas'    ,'Armadura de Talas'    ,'Escudo de Corpo'
+    ,'Escudo de Corpo'    ,'Armadura da Fenix'    ,'Botas de Velociodade'    ,'Botas de Velociodade'    ,'Botas de Velociodade'    ,'Manto de invisibilidade'
+    ,'Manto de invisibilidade'    ,'Manto de invisibilidade'    ,'Luva de Precisão'     ,'Luva de Precisão'    ,'item pica'    ,'Poção Basica'    ,'Poção Basica'
+    ,'Poção Basica'    ,'Poção Basica'    ,'Poção Basica'    ,'Poção Avançada'    ,'Poção Avançada'    ,'Poção Avançada'    ,'Poção Avançada'     ,'Poção Heroica'
+    ,'Poção Heroica'    ,'Bombas'    ,'Bombas'    ,'Bombas'    ,'Bombas'    ,'Bombas']
+
 const inputTask = document.querySelector('.input-task');
 const btnTask = document.querySelector('.btn-task');
 const taskList = document.querySelector('.list-task');
@@ -63,7 +71,7 @@ function saveTask(){
         
     }
 
-    const taskJson =JSON.stringify(list)
+    const taskJson =JSON.stringify(itens)
     console.log(taskJson)
     localStorage.setItem('tarefas', taskJson)
 }
@@ -80,15 +88,3 @@ function reloadTask(){
 
 reloadTask();
 
-
-
-/**
- *  const tasks = localStorage.getItem('terefas');
-    const taskList = JSON.parse(tasks);
-    console.log(tasks+'            '+taskList)
-
-    for(let task of taskList){
-        createItemList(task);
-    }
- * 
- */
