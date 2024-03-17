@@ -92,37 +92,10 @@ function rand(min, max){
 }
 
 function listaritens(listaDeItens){
+    
     listaItens.map((val)=>{
     
             taskList.innerHTML+= val.html
     })}
 
-
-function saveTask(){
-    const liTask = taskList.querySelectorAll('li')
-    const list = []
-
-    for(let task of liTask){
-        let textTask = task.innerText
-        textTask = textTask.replace('APAGAR','').trim();
-        list.push(textTask)
-        
-    }
-
-    const taskJson =JSON.stringify(itens)
-    console.log(taskJson)
-    localStorage.setItem('tarefas', taskJson)
-}
-function reloadTask(){
-    const tarefas = localStorage.getItem('tarefas');
-    const listaDeTarefas = JSON.parse(tarefas);
-  
-    for(let [k, v] of Object.entries(listaDeTarefas || NaN )){
-        console.log(k+'          '+v)
-        createItemList(v)
-    }
-    }
-
-
-reloadTask();
 
