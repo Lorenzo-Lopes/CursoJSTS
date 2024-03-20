@@ -1,8 +1,11 @@
+// lorenzolopes 81334699Nk
+// mongodb+srv://lorenzolopes:81334699Nk@cluster01.i3tgciz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster01
+
 require('dotenv').config()
 const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
-
+// const conectionString ='mongodb+srv://LorenzoLopes:81334699@cursojs.sz5srjh.mongodb.net/BaseDados?retryWrites=true&w=majority&appName=CursoJs'
 mongoose.connect(process.env.CONECTIONSTRING)
 .then(()=>{
     app.emit('pronto')
