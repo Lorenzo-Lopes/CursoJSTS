@@ -16,7 +16,7 @@ const session = require('express-session')
 const MongoStore =  require('connect-mongo')(session);
 const flash = require('connect-flash')
 const path = require('path')
-// const {meuMidddleware} =require('./src/middleware/middleware')
+const {meuMiddleWare} =require('./src/middleware/middleware')
 const routes = require('./routes')
 // const {middlewareGlobal} = require('./src/middleware/middleware')
 // const { toPrimitive } = require('core-js/fn/symbol')
@@ -39,7 +39,7 @@ app.use(flash());
 app.set('views', path.resolve(__dirname,'src','views'))
 app.set('view engine','ejs')
 
-// app.use(meuMidddleware)
+app.use(meuMiddleWare)
 app.use(routes)
 
 

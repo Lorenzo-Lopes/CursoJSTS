@@ -3,7 +3,7 @@ exports.paginaInicial =(req ,res)=>{
     console.log(req.flash('error'), req.flash('succes'), req.flash('info'))
     console.log(req.session.usuario)
     res.render('index',{
-        titulo:'esse sera o titulo da pagina',
+        // titulo:'esse sera o <span style="color: red;">titulo</span> da pagina',
         numeros:[0,1,2,3,,4,5,6,7,8,9]
     })
 
